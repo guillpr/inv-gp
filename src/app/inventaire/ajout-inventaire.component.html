@@ -1,0 +1,100 @@
+<form [formGroup]="formulaire" >
+<div class="formulaireAjoutInv">
+        <div class="wrapper">
+                <div class="title">
+                    Ajout d'inventaire
+                </div>
+                <div class="form">
+                    <div class="input_field">
+                        <label for="Date">Date</label>
+                      
+                        <input class="datePick" matInput [matDatepicker]="picker" placeholder="MM/JJ/AAAA" formControlName="dateDeConservation" >
+                       
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                       
+                
+                    </div>
+
+                    <!--nouvelle section-->
+                
+                              
+                              
+                                <div class="erreurMessage" *ngIf="this.formulaire.controls.dateDeConservation.invalid&&this.submitted">Veuillez entrer une date valide</div>
+                               
+                   
+
+                    <!--fin nouvelle section-->
+                 
+                    <div class="input_field">
+                            <label for="Produits">Produits</label>
+                            <div class="custom_select">
+                                <select  formControlName="typeDeProduit" >
+                                    <option value="">Sélectionner</option>
+                                    <option value="BoeufH">Boeuf Haché</option>
+                                    <option value="Poulet">Poulet</option>
+                                </select>
+                                <button id='btnPro' class="btnPlus" (click)="OuvrirProduits()" >+</button>
+                            </div>
+                          
+                          
+                    
+                        </div>
+                        <div class="erreurMessage" *ngIf="this.formulaire.controls.typeDeProduit.invalid&&this.submitted">Veuillez sélectionner un produit</div>
+                        <div id="sectionProduit">
+                                <div class="input_field" id="ajoutProduit">
+                                        <label for="Produits">Ajouter un produit</label>
+                                      
+                                    </div>
+                                    <div class="input_fieldPro">
+                                            <input type="text"  class="inputPro" formControlName="ajoutProduit">
+                                    </div>
+                                    <div class="erreurMessage" *ngIf="this.submitted&&this.affichage==true">Veuillez sélectionner un produit à ajouté</div>
+                                    <div class="input_field">
+                                            <input id="btnAjPro" type="button" (click)="AjoutProduit()" value="Enregistrer produit" class="btn"
+                                            [attr.disabled]="this.formulaire.controls.ajoutProduit.errors  ? 'disabled' : null"
+                                            [className]="this.formulaire.controls.ajoutProduit.valid ? 'btn' : 'disButt'">
+                    
+                                        </div>
+                        </div>
+                      
+                        <div class="input_field">
+                                <label for="Quantité">Quantité</label>
+                                <input type="text" class="input" formControlName="quantite">
+                        
+                            </div>
+                            <div class="erreurMessage" *ngIf="this.formulaire.controls.quantite.invalid&&this.submitted">Veuillez entrer une quantité</div>
+                            <div class="input_field">
+                                    <label for="Unité">Unité</label>
+                                    <div class="custom_select">
+                                            <select formControlName="typeUnite" >
+                                                <option value="">Sélectionner</option>
+                                                <option value="Grammes">Grammes</option>
+                                                <option value="Kilo">Kilo</option>
+                                                <option value="Unite">Unité</option>
+                                            </select>
+                                        </div>
+                            
+                                </div>
+                                <div class="erreurMessage" *ngIf="this.formulaire.controls.typeUnite.invalid&&this.submitted">Veuillez sélectionner un type d'unité</div>
+                               
+                                <div class="input_field">
+                                        <label for="État">État</label>
+                                        <input type="text" class="input" formControlName="typeConservation">
+                                
+                                    </div>
+                                    <div class="erreurMessage" *ngIf="this.formulaire.controls.typeConservation.invalid&&this.submitted">Veuillez sélectionner un type d'unité</div>
+                                    <div class="input_field">
+                                        <input [attr.disabled]="this.formulaire.controls.dateDeConservation.errors || this.formulaire.controls.typeDeProduit.errors
+                                         || this.formulaire.controls.quantite.errors   || this.formulaire.controls.typeUnite.errors || this.formulaire.controls.typeConservation.errors ||
+                                         this.formulaire.errors  ? 'disabled' : null" type="button" (click)="AjoutInventaire()" value="Enregistrer" class="btn"
+                                         [className]="formulaire.valid ? 'btn' : 'disButt'">
+                
+                                    </div>
+                </div>
+                </div>
+</div>
+
+<a routerLink="user">User</a>
+</form>
+

@@ -1,0 +1,43 @@
+<form [formGroup]="formulaire" >
+    <div class="formulaireAjoutInv">
+            <div class="wrapper">
+                    <div class="title">
+                        Connexion
+                    </div>
+                    <div class="form">
+                       
+                     
+                      
+                          
+                          
+                                <div class="input_field">
+                                    <label for="mail">Courriel</label>
+                                    <input type="text" class="input" formControlName="mail">
+                            
+                                </div>
+                                <div class="erreurMessage" *ngIf="this.formulaire.controls.mail.errors&&this.submitted">Veuillez entrer une adresse courriel</div>
+                                <div class="erreurMessage" *ngIf="f('mail').errors?.pattern">Veuillez entrer une adresse courriel valide</div>
+                                <div class="input_field">
+                                    <label for="password">Mot de passe</label>
+                                    <input type="password" class="input" formControlName="password">
+                            
+                                </div>
+                                <div class="erreurMessage" *ngIf="this.formulaire.controls.password.invalid&&this.submitted">Veuillez entrer un mot de passe</div>
+                              
+                                   
+                                   
+                                        <div class="input_field">
+                                            <input [attr.disabled]="null" (click)="conUtilisateur()" type="button" value="Se connecter" class="btn"
+                                             [className]="formulaire.valid ? 'btn' : 'disButt'">
+                    
+                                        </div>
+                    </div>
+                    <div>Pas de compte?</div>
+                    <div><a [routerLink]="['/enregistrement']">S'enregistrer</a></div>
+                    </div>
+                   
+    </div>
+  
+    </form>
+    
+    

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "nom": "Patates",
+        "description": "de bonnes frites",
+        "dateAjout": "2023-04-27",
+        "quantite": 0,
+        "unite":"Grammes",
+        "etat": "Sous-vide",
+        "dateDePer":"2024-04-27"
+      },
+      {
+        "id": 1,
+        "nom": "Poutine",
+        "description": "",
+        "dateAjout": "2023-04-20",
+        "quantite": 0,
+        "unite":"Grammes",
+        "etat": "Ziploc",
+        "dateDePer":"2023-07-20"
+      }
+]

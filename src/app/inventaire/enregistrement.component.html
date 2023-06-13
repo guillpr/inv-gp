@@ -1,0 +1,68 @@
+<form [formGroup]="formulaire" >
+    <div class="formulaireAjoutInv">
+            <div class="wrapper">
+                    <div class="title">
+                       Créer un compte
+                    </div>
+                    <div class="form">
+                       
+                     
+                      
+                          
+                            <div class="input_field">
+                                    <label for="Nom">Nom</label>
+                                    <input type="text" class="input" formControlName="nom">
+                            
+                                </div>
+                                <div class="erreurMessage" *ngIf="this.formulaire.controls.nom.invalid&&this.submitted">Veuillez entrer un nom</div>
+                                <div class="input_field">
+                                    <label for="Prenom">Prénom</label>
+                                    <input type="text" class="input" formControlName="prenom">
+                            
+                                </div>
+                                <div class="erreurMessage" *ngIf="this.formulaire.controls.prenom.invalid&&this.submitted">Veuillez entrer un prénom</div>
+                                <div class="input_field">
+                                    <label for="mail">Courriel</label>
+                                    <input type="text" class="input" formControlName="mail">
+                            
+                                </div>
+                                <div class="erreurMessage" *ngIf="this.formulaire.controls.mail.errors&&this.submitted">Veuillez entrer une adresse courriel</div>
+                                <div class="erreurMessage" *ngIf="f('mail').errors?.pattern">Veuillez entrer une adresse courriel valide</div>
+                                <div class="input_field">
+                                    <label for="confMail">Confirmation courriel</label>
+                                    <input type="text" class="input" formControlName="confMail">
+                            
+                                </div>
+                                <div class="erreurMessage" *ngIf="formulaire.hasError('erreurCourrielConfirmation')&&formulaire.controls.confMail.dirty">Veuillez entrer le même courriel que la  confirmation de courriel</div>
+                                <!--Mot de passe-->
+                               
+
+                                <div class="input_field">
+                                    <label for="password">Mot de passe</label>
+                                    <input type="password" class="input" formControlName="password">
+                            
+                                </div>
+                                <div class="erreurMessage" *ngIf="this.formulaire.controls.password.errors&&this.submitted">Veuillez entrer un mot de passe</div>
+                                <div class="erreurMessage" *ngIf="f('password').errors?.pattern">Veuillez entrer un mot de passe d'au moins 6 caractères , contenant une lettre, un chiffre et un caractères spécial</div>
+                                <div class="input_field">
+                                    <label for="confPass">Confirmation mot de passe</label>
+                                    <input type="password" class="input" formControlName="confPass">
+                            
+                                </div>
+                                <div class="erreurMessage" *ngIf="formulaire.hasError('erreurPassConfirmation')&&formulaire.controls.confPass.dirty">Veuillez entrer le même mot de passe</div>
+                              
+                                   
+                                   
+                                        <div class="input_field">
+                                            <input [attr.disabled]="!formulaire.valid ? 'disabled':null" type="button"(click)="ajouterUtilisateur()" value="Enregistrer" class="btn"
+                                             [className]="formulaire.valid ? 'btn' : 'disButt'">
+                    
+                                        </div>
+                                       
+                    </div>
+                    </div>
+    </div>
+    </form>
+    
+    
+

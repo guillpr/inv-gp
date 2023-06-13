@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "mail": "jackPeter@gmail.com",
+      "nom": "Jackson",
+      "prenom": "Peter",
+      "password": "U2FsdGVkX18kEdTm6GacRYza8I7WJeiaCjX6ZLAHw3A="
+    },
+    {
+      "id": 2,
+      "mail": "neslsyManda@gmail.com",
+      "nom": "Mandela",
+      "prenom": "Nelson",
+      "password": "U2FsdGVkX187XrPUp46qtIEv9TocOLcIBxk71TR4m34="
+    },
+    {
+      "id": 3,
+      "mail": "proulxguill@gmail.com",
+      "nom": "Proulx",
+      "prenom": "Guillaume",
+      "password": "U2FsdGVkX1+9JkgOzUu8fZg3lgyH9Fnlzts8RWJluyk="
+    },
+    {
+      "id": 4,
+      "mail": "test@gmail.com",
+      "nom": "TestNom",
+      "prenom": "TestPrénom",
+      "password": "U2FsdGVkX1+mI/5aRnRvRlCPKNEV6AqoRBzysTfRT+E=",
+      "produits": []
+    }
+  ]
+}

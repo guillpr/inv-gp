@@ -1,1 +1,173 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background:#d4d4d4;
+    padding:0 10px
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.wrapper{
+    max-width: 500px;
+    width: 100%;
+    background: #f3f3f3;
+    margin: 20px auto;
+    padding:30px;
+    box-shadow: 5px 5px 2px rgba(0,0, 0, 0.125);
+    border-radius: 10px;
+}
+.wrapper .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color:black;
+    text-transform: uppercase;
+    text-align: center;
+}
+.wrapper , form{
+    width: 100%;
+
+}
+.wrapper .form .input_field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+}
+.wrapper .form .input_field label{
+    width: 200px;
+    color:black;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.wrapper .form .input_field .datePick,
+.wrapper .form .input_field .custom_select select {
+    width: 85%;
+}
+.wrapper .form .input_field input{
+    width: 100%;
+    outline:none;
+    border:1px solid black;
+    font-size: 15px;
+    padding:8px 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    margin-left: 2px;
+    font-weight: bold;
+}
+.wrapper .form .input_field .custom_select
+{
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+.wrapper .form .input_field .custom_select select{
+    border:1px solid black;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 88%;
+    height: 100%;
+    padding:8px 10px;
+    border-radius: 3px;
+   
+    outline:none;
+
+}
+
+.wrapper .form .input_field .custom_select .btnPlus{
+    color: green;
+    font-size: 25px;
+    border:none;
+    position: relative;
+    top:5px;
+    left:15px;
+    width: 35px;
+    background: #f3f3f3;
+    cursor: pointer;
+
+}
+.wrapper .form .input_field .custom_select .btnMOins{
+    color: red;
+    font-size: 25px;
+    border:none;
+    position: relative;
+    top:5px;
+    left:15px;
+    width: 35px;
+    background: #f3f3f3;
+    cursor: pointer;
+
+}
+.wrapper .form .input_field .custom_select:before{
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 55px;
+    border:8px solid;
+    border-color:black transparent transparent transparent;
+    pointer-events: none;
+
+}
+.wrapper .form .input_field .input:focus,
+.wrapper .form .input_field select:focus{
+    border:2px solid black;
+}
+.wrapper .form .input_field .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: black;
+    border-radius: 3px;
+    color:white;
+    border:1px solid #c5c2c2;
+}
+.wrapper .form .input_field .btn:hover{
+    background: white;
+    color:black;
+    border:2px solid  black;
+
+}
+#ajoutProduit{
+    text-align: center;
+    display: block;
+}
+#inProd{
+    width: 65%!important;
+    margin-left: 135px;
+}
+.inputPro{
+    width: 69%;
+    outline:none;
+    border:1px solid black;
+    font-size: 15px;
+    padding:8px 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    margin-left: 135px;
+    margin-bottom: 15px;
+}
+#sectionProduit{
+    display:none;
+}
+.erreurMessage{
+    color:red;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: 140px;
+   
+}
+.disButt{
+    background-color:#b1b1b1;
+}
+.disButt:hover{
+   background-color: none;
+}

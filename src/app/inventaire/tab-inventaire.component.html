@@ -1,0 +1,48 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+               Date
+            </th>
+            <th>
+                Produits
+             </th>
+             <th>
+                Quantité
+             </th>
+             <th>
+                Unité
+             </th>
+             <th>
+                État
+             </th>
+             <th>
+                Date de péremption
+             </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let produit of produits">
+            <td data-title="Date">
+                {{produit.dateAjout}}
+            </td>
+            <td data-title="Produits">
+                {{produit.nom}}
+            </td>
+            <td data-title="Quantité">
+                {{produit.quantite}}
+            </td>
+            <td  data-title="Unité">
+                {{produit.unite}}
+            </td>
+            <td data-title="État">
+                {{produit.etat}}
+            </td>
+            <td data-title="Date de péremption">
+                {{produit.dateDePer}}
+            </td>
+        </tr>
+      
+        
+    </tbody>
+</table>
